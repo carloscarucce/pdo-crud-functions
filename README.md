@@ -70,7 +70,13 @@ $data = [
 ];
 
 //UPDATE users SET name='John D.', active='1' WHERE id='123'
-$userId = pdo_update_row($pdo, $table, $data, $id);
+$updated = pdo_update_row($pdo, $table, $data, $id);
+
+if ($updated) {
+    //row updated
+} else {
+    //row not updated
+}
 ```
 
 ### Deleting a row
@@ -81,7 +87,13 @@ $id = 123;
 $table = 'users';
 
 //DELETE FROM users WHERE id='123'
-$userId = pdo_delete_row($pdo, $table, $id);
+$deleted = pdo_delete_row($pdo, $table, $id);
+
+if ($deleted) {
+    //row deleted
+} else {
+    //row not deleted
+}
 ```
 
 ### Selecting data
@@ -120,7 +132,6 @@ pdo_select_query($pdo, $query, $params, $renderLineFn);
 echo '</ul>';
 echo 'Results count: ', $result->rowCount();
 ```
-
 Both methods would result in the same output:
 ````html
 <ul>
