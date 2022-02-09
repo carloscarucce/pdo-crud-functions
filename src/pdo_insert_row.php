@@ -1,6 +1,6 @@
 <?php
 
-if (!function_exists('pdo_insert')) {
+if (!function_exists('pdo_insert_row')) {
     /**
      * Inserts a new in given table.
      *
@@ -10,7 +10,7 @@ if (!function_exists('pdo_insert')) {
      *
      * @return string|null The new row identifier, or NULL in case it has not been created
      */
-    function pdo_insert(PDO $pdo, string $table, array $data): ?string
+    function pdo_insert_row(PDO $pdo, string $table, array $data): ?string
     {
         $fields = implode(',', array_keys($data));
         $placeholders = rtrim(str_repeat('?,', count($data)), ',');

@@ -38,6 +38,7 @@ I will leave some links for further details:
 - (Video tutorial) https://youtu.be/yWJFbPT3TC0
 
 ### Inserting data
+
 ```php
 <?php
 
@@ -49,7 +50,7 @@ $data = [
 ];
 
 //INSERT INTO users (name, email, active) VALUES ('John Doe', 'johndoe@example.com', '1')
-$userId = pdo_insert($pdo, $table, $data);
+$userId = pdo_insert_row($pdo, $table, $data);
 
 if (!is_null($userId)) {
     //row inserted
