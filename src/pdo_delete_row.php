@@ -9,7 +9,7 @@ if (!function_exists('pdo_delete_row')) {
      * @param mixed $primaryKeyValue Primary key column value
      * @param string $primaryKeyColumn Primary key column name (default: 'id')
      *
-     * @return bool
+     * @return int
      */
     function pdo_delete_row(PDO $pdo, string $table, $primaryKeyValue, string $primaryKeyColumn = 'id'): ?int
     {
