@@ -126,8 +126,6 @@ $renderLineFn = function($row) {
     echo '<li>', $row['name'], ' - ', $row['active'], '</li>';
 };
 
-$result = 
-
 echo '<ul>';
 pdo_select_query($pdo, $query, $params, $renderLineFn);
 echo '</ul>';
