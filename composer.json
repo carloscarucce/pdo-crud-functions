@@ -1,0 +1,16 @@
+{
+    "name": "carloscarucce/pdo-crud-functions",
+    "description": "Provides functions for common tasks using PDO",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1",
+        "ext-pdo": "*"
+    },
+    "files": [
+        "src/pdo_delete_row.php",
+        "src/pdo_insert_row.php",
+        "src/pdo_select_query.php",
+        "src/pdo_update_row.php"
+    ]
+}
